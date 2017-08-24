@@ -8,6 +8,7 @@ ENV JAVA_MX=1G \
 ADD $DOWNLOAD_LINK /usr/local/share/java/otp.jar
 RUN ln -s /usr/local/share/java/otp.jar /usr/local/bin/
 
+COPY otp /usr/local/bin/
 RUN chmod 755 /usr/local/bin/*
 
 EXPOSE 8080
